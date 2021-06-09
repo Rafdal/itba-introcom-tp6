@@ -29,20 +29,20 @@ push_R	EQU	*
 	pshx		;backup de X
 	psha		;guardo el valor de A (byte a cargar)
 	tsx
-	pshy		;backup de Y (posición de memoria del vector)
+	pshy		;backup de Y (posicion de memoria del vector)
 	pshb		;backup de B
 
 	ldab	#1	;cargo la cantidad de repeticiones del ciclo (vectorSize-1)
 
 L01	ldaa	1,y	;copio el valor siguiente
-	staa	0,y	;y lo desplazo hacia la izquierda (posición anterior)
-	iny		;voy a la sig. posición
+	staa	0,y	;y lo desplazo hacia la izquierda (posicion anterior)
+	iny		;voy a la sig. posicion
 	decb		;decremento la cantidad de ciclos restantes
 	bne	L01	;si no son cero, repito
 
 
 	ldaa	0,x	;leo el byte del input que debo pushear
-	staa	0,y	;lo escribo en la última posición
+	staa	0,y	;lo escribo en la ultima posicion
 
 	pulb		;recupero todos los backups
 	puly
@@ -78,17 +78,17 @@ push_L	EQU	*
 
 	ldab	#1	;cargo la cantidad de repeticiones del ciclo (vectorSize-1)
 	aby		agrego el desfase
-	dey		resto 1 (porque necesito posicionarme en la posición anterior, no en la última)
+	dey		resto 1 (porque necesito posicionarme en la posicion anterior, no en la ultima)
 
-L03	ldaa	0,y	;copio el valor de la posición actual
-	staa	1,y	;y lo guardo en la posición siguiente (a la derecha)
-	dey		;voy a la posición izquierda (anterior)
+L03	ldaa	0,y	;copio el valor de la posicion actual
+	staa	1,y	;y lo guardo en la posicion siguiente (a la derecha)
+	dey		;voy a la posicion izquierda (anterior)
 	decb		;decremento la cantidad de ciclos restantes
 	bne	L03	;si no son cero, repito
 
 
 	ldaa	0,x	;leo el byte del input que debo pushear
-	staa	1,y	;lo escribo en la primera posición
+	staa	1,y	;lo escribo en la primera posicion
 
 	pulb		;recupero todos los backups
 	puly

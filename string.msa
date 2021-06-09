@@ -37,7 +37,7 @@ str2int	EQU	*
 force0	ldaa	#'0'		cargo un cero forzado
 
 skip0	ldab	#'0'		cargo en B el "0" en ASCII
-	sba			resto el B de A y así tengo el valor de A en unidades
+	sba			resto el B de A y asi tengo el valor de A en unidades
 	ldab	#10		cargo el B con 10
 	mul			multiplico A por 10 para tener el decimal y lo guardo en B
 
