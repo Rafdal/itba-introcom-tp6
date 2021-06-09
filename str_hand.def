@@ -1,7 +1,7 @@
 *********************************************************
 *		STRING HANDLERS (str_hand.def)		*
 *********************************************************
-*	Este archivo de definiciones contiene macros	*
+*	Este archivo de definiciones contiene macros 	*
 *	para manejar las subrutinas de los modulos:	*
 *	- string.msa					*
 *	- UI.msa					*

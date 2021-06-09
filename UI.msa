@@ -8,7 +8,7 @@
 
 	extern	push_L,push_R,str2int
 
-	public	initdis,waitkey,outchar,println,clrdis,numForm
+	public	initdis,waitkey,outchar,println,clrdis,numForm 
 
 ******* Ports ***************************
 

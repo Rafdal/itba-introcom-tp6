@@ -27,7 +27,7 @@
 * [PCL]
 push_R	EQU	*
 	pshx		;backup de X
-	psha		;guardo el valor de A (byte a cargar)
+	psha		;guardo el valor de A (byte a cargar) 
 	tsx
 	pshy		;backup de Y (posicion de memoria del vector)
 	pshb		;backup de B

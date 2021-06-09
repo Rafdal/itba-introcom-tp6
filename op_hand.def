@@ -8,7 +8,7 @@
 
 * TO-DO: OPTIMIZAR, REVISAR
 *	Comentario:
-*	creo que esta macro no es necesaria, repite operaciones
+*	creo que esta macro no es necesaria, repite operaciones 
 *	que se podrian hacer una sola vez al final del switch
 *	queda pendiente optimizar la seccion del switch en el main.msa
 *	y eliminar esta macro
